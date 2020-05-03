@@ -8,5 +8,10 @@ interface Crud{
 	public function update();
 	public function removeOne();
 	public function removeAll();
+
+	//methods added - lab 2
+
+	public function validateForm();
+	public function createFormErrorSessions();
 }
 ?>
