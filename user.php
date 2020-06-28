@@ -69,7 +69,7 @@ class User implements Crud,Authenticator
 		$con=new DBConnector;
 		//$con=mysqli_connect('localhost','root','','btc3205')
 
-		$res=mysqli_query($con->conn,"INSERT INTO users(first_name,last_name,user_city,username,password)VALUES('$fn','$ln','$city','$uname','$pass')");
+		$res=mysqli_query($con->conn,"INSERT INTO user(first_name,last_name,user_city,username,password)VALUES('$fn','$ln','$city','$uname','$pass')");
 		return $res;
 	}
 	public function readAll(){
@@ -133,7 +133,7 @@ class User implements Crud,Authenticator
 	public function isPasswordCorrect(){
 		$con=new DBConnector;
 		$found=false;
-		$sql="SELECT * FROM users";
+		$sql="SELECT * FROM user";
 		$res=mysqli_query($con->conn,$sql);
 
 		while ($row=mysqli_fetch_array($res)) {
@@ -166,7 +166,7 @@ class User implements Crud,Authenticator
 		$_SESSION['username']=$this->getUsername();
 	}
 
-	public function isUserExist(){
+	/*public function isUserExist(){
 		
 		$con=new DBConnector;
 		$username=$this->getUsername();
@@ -198,6 +198,6 @@ class User implements Crud,Authenticator
 		return $found;
 		//return true.value of $found if credentials are correct.
 
-	} 
+	} */
 }
 ?>

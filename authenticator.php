@@ -5,6 +5,6 @@
 		public function login();
 		public function logout();
 		public function createUserSession();
-		public function isUserExist();
+		//public function isUserExist();
 	}
 ?>

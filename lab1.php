@@ -13,7 +13,7 @@ if (isset($_POST ['btn_save'])) {
 	$password=$_POST['password'];
 
 	$user=new User($first_name,$last_name,$city,$username,$password);
-	$user->isUserExist();
+	//$user->isUserExist();
 	
 
 	if (!$user->validateForm()) {
